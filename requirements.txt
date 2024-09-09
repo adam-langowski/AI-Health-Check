@@ -1,0 +1,9 @@
+streamlit
+pickle
+numpy
+tensorflow
+keraa
+PIL 
+cv2
+base64
+io
