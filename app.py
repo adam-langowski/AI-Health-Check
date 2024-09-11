@@ -1,5 +1,5 @@
 import streamlit as st
-from modules import diabetes, brain_tumor
+from modules import diabetes, brain_tumor, blood_cells
 
 st.set_page_config(
     page_title="AI Health Check",
@@ -10,6 +10,7 @@ st.set_page_config(
 pages = {
     "Diabetes Prediction": diabetes.app,
     "Brain Tumor Detection": brain_tumor.app,
+    "Blood Cells Detection": blood_cells.app,
 }
 
 with open("styles/style.css") as f:

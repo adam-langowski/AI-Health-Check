@@ -2,8 +2,12 @@ streamlit
 pickle
 numpy
 tensorflow
-keraa
+torch
+keras
 PIL 
 cv2
 base64
 io
+ultralytics
+numpy
+pandas
