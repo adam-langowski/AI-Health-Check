@@ -1,8 +1,22 @@
 # AI-Health-Check
-Multimodel ML App for Predicting Diabetes, Estimating VO2max, and Detecting Brain, Heart, and Liver Diseases
 
-- Diabetes dataset: https://www.kaggle.com/datasets/mathchi/diabetes-data-set
+**Multimodel Machine Learning Application**
 
-- Brain Tumor dataset: https://www.kaggle.com/datasets/ahmedhamada0/brain-tumor-detection
+**Explore the app:** [Link to the app]
 
-- Blood Cells dataset: https://universe.roboflow.com/clg-vtj9f/blood-cell-detection-bsbvn/dataset/4
+---
+
+## Sample Data
+You can download sample data for the application here: [sample data](https://github.com/adam-langowski/AI-Health-Check/tree/main/data/sample%20data)
+
+---
+
+## Key Features and Tools
+
+| **Feature**                              | **Technologies**                                             | **Dataset**                                                                 |
+|------------------------------------------|--------------------------------------------------------------|------------------------------------------------------------------------------|
+| **Diabetes Prediction**                  | `scikit-learn`, `numpy`, `pandas`, `PCA`, `VotingClassifier` | [Diabetes Dataset (Kaggle)](https://www.kaggle.com/datasets/mathchi/diabetes-data-set) |
+| **Brain Tumor Detection**                | `TensorFlow`, `Keras`, `OpenCV`, `PIL`, `seaborn`            | [Brain Tumor Dataset (Kaggle)](https://www.kaggle.com/datasets/ahmedhamada0/brain-tumor-detection) |
+| **Blood Cell Detection and Count**       | `PyTorch`, `YOLOv10`, `PIL`, `OpenCV`                        | [Blood Cells Dataset (Roboflow)](https://universe.roboflow.com/clg-vtj9f/blood-cell-detection-bsbvn/dataset/4) |
+
+---
