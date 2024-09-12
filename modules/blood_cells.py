@@ -9,37 +9,46 @@ def app():
     
     with open("styles/style.css") as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+    # Confidence level slider
+    confidence_level = st.slider("**Confidence level:**", min_value=0.0, max_value=1.0, value=0.25, step=0.01)
     
-    # Upload an image
+    # Uploading img
     uploaded_file = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
     
     if uploaded_file is not None:
         # INPUT IMG
         image = Image.open(uploaded_file)
-                
-        # MODEL
-        model_path = '../models/model_blood_cells_best.pt'  
-        model = YOLO(model_path)
-        
-        # PREDICTION
-        annotated_image, cell_count = predict_and_annotate(image, model)
-        
-        # DISPLAY RESULT
-        st.image(annotated_image, width=640, caption='Annotated Image (640x640)', use_column_width=False)
-        
-        st.write("Detected Cells:")
-        st.markdown(helpers.generate_html_table(cell_count), unsafe_allow_html=True)
 
+        if st.button("Detect cells"):
+            # MODEL
+            model_path = '../models/model_blood_cells_best.pt'  
+            model = YOLO(model_path)
+            
+            # PREDICTION
+            annotated_image, cell_count = predict_and_annotate(image, model, confidence_level)
+            
+            annotated_image_base64 = helpers.image_to_base64(annotated_image)
+            st.markdown(
+                f'<img class="center-image" src="data:image/png;base64,{annotated_image_base64}" width="640">',
+                unsafe_allow_html=True
+            )
+            
+            # Display detected cells in a table
+            st.write("Detected cells:")
+            st.markdown(helpers.generate_html_table(cell_count), unsafe_allow_html=True)
 
-# prediction and results 
-def predict_and_annotate(image, model):
+# Prediction and results 
+def predict_and_annotate(image, model, confidence):
     # prediction
-    result = model.predict(source=image, imgsz=640, conf=0.25)
+    result = model.predict(source=image, imgsz=640, conf=confidence)
     annotated_res = result[0].plot()  
 
     # detection data
     detection = result[0].boxes.data
-    class_names = [model.names[int(cls)] for cls in detection[:, 4]]  
+    class_names = [model.names[int(cls)] for cls in detection[:, 5]]  
     count = Counter(class_names)
 
-    return annotated_res, count
+    annotated_image = Image.fromarray(annotated_res) # PIL img
+
+    return annotated_image, count

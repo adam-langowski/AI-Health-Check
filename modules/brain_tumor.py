@@ -14,7 +14,7 @@ def app():
     brain_model = keras.models.load_model('models/brain_model_best.keras')
 
     # IMAGE UPLOAD
-    uploaded_file = st.file_uploader("Choose a brain MRI image", type=["jpg", "png", "jpeg"])
+    uploaded_file = st.file_uploader("**Choose a brain MRI image**", type=["jpg", "png", "jpeg"])
 
     if uploaded_file is not None:
         image = Image.open(uploaded_file)
