@@ -19,5 +19,5 @@ You can download sample data for the application here: [sample data](https://git
 | **Brain Tumor Detection**                | `TensorFlow`, `Keras`, `OpenCV`, `PIL`, `seaborn`            | [Brain Tumor Dataset (Kaggle)](https://www.kaggle.com/datasets/ahmedhamada0/brain-tumor-detection) |
 | **Blood Cell Detection and Count**       | `PyTorch`, `YOLOv10`, `PIL`, `OpenCV`                        | [Blood Cells Dataset (Roboflow)](https://universe.roboflow.com/clg-vtj9f/blood-cell-detection-bsbvn/dataset/4) |
 | **Liver Segmantation**                   | `PyTorch`, `MONAI`, `3D slicer`, `NIfTI`, `DICOM`            | [Liver Dataset (The Medical Segmentation Decathlon)](http://medicaldecathlon.com/) |
-
+| **Organ Segmantation**                   | `PyTorch`, `MONAI`, `tcia`, `DICOM`, `torch`                 | [Organs dataset (The Cancer Imaging Archive)](https://www.cancerimagingarchive.net/) |
 ---

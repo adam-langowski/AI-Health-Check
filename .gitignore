@@ -4,3 +4,7 @@ data/brain_tumor/pred
 blood-cell-detection-4/
 runs/ 
 data/Task03_Liver
+notebooks/..data/
+models/wholeBody_ct_segmentation
+ct_data/
+data/body_scan/
