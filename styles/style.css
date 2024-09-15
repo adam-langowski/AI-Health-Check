@@ -9,6 +9,11 @@
     margin-right: auto;
 }
 
+.center-caption {
+    text-align: center; 
+    margin-top: 5px;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;

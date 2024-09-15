@@ -3,11 +3,13 @@ from io import BytesIO
     
 # Convert image to base64 for HTML rendering
 def image_to_base64(image):
+    # Convert image to RGB mode if it has an alpha channel
+    if image.mode in ("RGBA", "LA") or (image.mode == "P" and "transparency" in image.info):
+        image = image.convert("RGB")
     buffered = BytesIO()
     image.save(buffered, format="JPEG")
     img_str = base64.b64encode(buffered.getvalue()).decode()
     return img_str
-
 
 # Generate HTML table
 def generate_html_table(cell_count):
