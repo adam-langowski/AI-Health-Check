@@ -22,5 +22,7 @@ You can download sample data for the application here: [sample data](https://git
 | **Organ Segmantation**                   | `PyTorch`, `MONAI`, `tcia`, `DICOM`, `torch`                 | [Organs dataset (The Cancer Imaging Archive)](https://www.cancerimagingarchive.net/) |
 | **Retinal Vessels Segmantation**         | `Keras`, `UNet`, `OpenCV`                                    | [Full repo about this project](https://github.com/adam-langowski/Segmenting-Blood-Vessels-With-CNN/) |
 | **Pneumonia Detection**                  | `TensorFlow`, `Keras`, `albumentations`, `OpenCV`            | [Pneumonia Dataset (Kaggle)](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia) |
+| **Medical Chatbot**                      | `Pinecone Vector Database`, `HuggingFace`, `LLM`, `langchain`| `Gale Encyclopedia Of Medicine Vol 2` |
+
 
 ---
