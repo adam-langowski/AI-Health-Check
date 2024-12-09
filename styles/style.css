@@ -1,6 +1,6 @@
 .custom-header {
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 22px;
+    border-top: 10px;
 }
 
 .center-image {
@@ -42,4 +42,15 @@ table tr:nth-of-type(even) {
 
 table tr:last-of-type {
     border-bottom: 2px solid #009879;
+}
+
+.css-qrbaxs .stRadio > label {
+    font-size: 18px; 
+    font-weight: bold;
+    line-height: 1.5em; 
+}
+
+.css-qrbaxs input[type="radio"] {
+    transform: scale(1.5); 
+    margin-right: 10px; 
 }

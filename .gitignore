@@ -10,3 +10,4 @@ models/wholeBody_ct_segmentation
 ct_data/
 data/body_scan/
 .env
+TODO.txt

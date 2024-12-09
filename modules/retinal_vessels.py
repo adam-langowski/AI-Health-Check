@@ -15,8 +15,8 @@ def app():
     st.markdown("<p style='text-align: center; color: white; font-size: 18px;'>Upload an image and select a model to segment retinal blood vessels</p>", unsafe_allow_html=True)
 
     # Sidebar for model selection
-    st.sidebar.markdown("<h2 style='color: white;'>Model Selection</h2>", unsafe_allow_html=True)
-    st.sidebar.markdown("<p style='color: gray; font-size: 16px;'>There are 2 models available, trained on 2 different databases.</p>", unsafe_allow_html=True)
+    st.sidebar.markdown("<h2 style='color: dark-grey;'>Model Selection</h2>", unsafe_allow_html=True)
+    st.sidebar.markdown("<p style='color: dark-gray; font-size: 16px;'>There are 2 models available, trained on 2 different databases.</p>", unsafe_allow_html=True)
 
     model_choice = st.sidebar.selectbox(
         "Choose an image format (database):",
