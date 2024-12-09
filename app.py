@@ -1,5 +1,5 @@
 import streamlit as st
-from modules import diabetes, brain_tumor, blood_cells, organ_segmentation, retinal_vessels, pneumonia
+from modules import diabetes, brain_tumor, blood_cells, organ_segmentation, retinal_vessels, pneumonia, chatbot
 
 st.set_page_config(
     page_title="AI Health Check",
@@ -8,6 +8,7 @@ st.set_page_config(
 )
 
 pages = {
+    "Home page - Medical Assistant": chatbot.app,
     "Blood Cells Detection": blood_cells.app,
     "Brain Tumor Detection": brain_tumor.app,
     "Diabetes Prediction": diabetes.app,
