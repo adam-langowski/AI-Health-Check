@@ -25,3 +25,43 @@ You can download sample data for the application here: [sample data](https://git
 | **Medical Chatbot**                      | `Pinecone Vector Database`, `RAG`, `LLM`, `langchain`        | `Gale Encyclopedia Of Medicine Vol2` |
 
 ---
+## Instructions
+
+Follow these steps to run the application locally and use all of the functionalities:
+
+### 1. Install **Ollama** and run the Llama model
+
+- First, make sure that **Ollama** is installed on your machine. You can download it from the official website: [https://ollama.com/](https://ollama.com/).
+  
+- Once Ollama is installed, open a terminal and run the following command to start the Llama model (first usage will download the model):
+
+  ```bash
+  ollama run llama3.2
+### 2. Install dependencies
+
+- Install the necessary Python dependencies for the project by running:
+
+  ```bash
+  pip install -r requirements.txt
+### 3. Set up Pinecone
+- Create a Pinecone account by going to https://www.pinecone.io/.
+
+- After signing up, get your Pinecone API Key from your account dashboard.
+
+- Create a .env file in the root directory of the project and add the following line with your Pinecone API Key:
+
+PINECONE_API_KEY="*your_pinecone_api_key*"
+
+- Now, run the script utils/store_index.py to create embeddings and store them in the Pinecone index:
+
+  ```bash
+  python utils/store_index.py
+This will initialize and populate the Pinecone index with necessary data for the application.
+
+### 4. Run the application
+
+- Finally start the application by running:
+
+    ```bash
+    streamlit run app.py
+This will launch the app in your browser.

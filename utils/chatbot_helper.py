@@ -1,7 +1,5 @@
-from langchain.chains import RetrievalQAWithSourcesChain
-from langchain_pinecone import PineconeVectorStore
-from langchain.embeddings import HuggingFaceEmbeddings
-from langchain.document_loaders import PyPDFLoader, DirectoryLoader
+from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_community.document_loaders import PyPDFLoader, DirectoryLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 # chatbot system message
