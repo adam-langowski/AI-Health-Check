@@ -1,13 +1,10 @@
 streamlit
-pickle
 numpy
 tensorflow
 torch
 keras
 PIL 
 cv2
-base64
-io
 ultralytics
 numpy
 pandas
