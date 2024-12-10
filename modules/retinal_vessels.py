@@ -3,11 +3,17 @@ import numpy as np
 import tensorflow as tf
 import cv2
 
-# Load models
-models = {
-    "HRF": tf.keras.models.load_model('models/model_segmentingVessels.keras'),
-    "DRIVE": tf.keras.models.load_model('models/model_DRIVE_segmentingVessels.keras')
-}
+# MODELS
+@st.cache_resource
+def load_models():
+    """Wczytaj modele z zasobów aplikacji"""
+    models = {
+        "HRF": tf.keras.models.load_model('models/model_segmentingVessels.keras'),
+        "DRIVE": tf.keras.models.load_model('models/model_DRIVE_segmentingVessels.keras')
+    }
+    return models
+
+models = load_models()
 
 def app():
     st.title("Retinal Blood Vessel Segmentation")

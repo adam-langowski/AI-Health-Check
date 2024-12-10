@@ -11,7 +11,12 @@ def app():
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
         
     # MODEL
-    brain_model = keras.models.load_model('models/brain_model_best.keras')
+    @st.cache_resource
+    def load_model():
+        brain_model = keras.models.load_model('models/brain_model_best.keras')
+        return brain_model
+    
+    brain_model = load_model()
 
     # IMAGE UPLOAD
     uploaded_file = st.file_uploader("**Choose a brain MRI image**", type=["jpg", "png", "jpeg"])

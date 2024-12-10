@@ -7,6 +7,13 @@ from utils import helpers
 def app():
     st.title("Blood Cell Detection 💦")
     
+    # MODEL
+    @st.cache_resource
+    def load_model():
+        model_path = '../models/model_blood_cells_best.pt'  
+        model = YOLO(model_path)                
+        return model 
+    
     with open("styles/style.css") as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
@@ -21,10 +28,9 @@ def app():
         image = Image.open(uploaded_file)
 
         if st.button("Detect cells"):
-            # MODEL
-            model_path = '../models/model_blood_cells_best.pt'  
-            model = YOLO(model_path)
-            
+
+            model = load_model()
+
             # PREDICTION
             annotated_image, cell_count = predict_and_annotate(image, model, confidence_level)
             

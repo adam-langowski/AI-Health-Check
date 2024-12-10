@@ -1,5 +1,5 @@
 import streamlit as st
-from tensorflow.keras.models import load_model
+import tensorflow as tf
 from PIL import Image
 import numpy as np
 import cv2
@@ -14,7 +14,7 @@ def app():
     # load model
     @st.cache_resource
     def load_pneumonia_model():
-        return load_model("models/pneumonia_detection_model.h5")
+        return tf.keras.models.load_model("models/pneumonia_detection_model.h5")
 
     pneumonia_model = load_pneumonia_model()
 

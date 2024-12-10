@@ -1,15 +1,14 @@
 import streamlit as st
-from modules import diabetes, brain_tumor, blood_cells, organ_segmentation, retinal_vessels, pneumonia, chatbot
 
 st.set_page_config(
     page_title="AI Health Check",
     layout='wide',
     page_icon='🩺'
 )
-
 with open("styles/style.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-  
+
+from modules import diabetes, brain_tumor, blood_cells, organ_segmentation, retinal_vessels, pneumonia, chatbot
 pages = {
     "🏠 Home - Medical Assistant": chatbot.app,
     "🔬 Blood Cells Detection": blood_cells.app,
@@ -28,7 +27,7 @@ st.sidebar.markdown(
         </div>
         """, unsafe_allow_html=True)
 
-selected_module = st.sidebar.radio('', options=list(pages.keys()))
+selected_module = st.sidebar.radio('', options=list(pages.keys()), label_visibility="collapsed")
 
 st.sidebar.markdown('<div class="custom-header">Filters:</div>', unsafe_allow_html=True)
 

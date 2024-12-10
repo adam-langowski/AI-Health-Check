@@ -6,7 +6,12 @@ def app():
     st.title("Diabetes Prediction 🩸")
 
     # MODEL
-    diabetes_model = pickle.load(open('models/model_diabetes.pkl', 'rb'))
+    @st.cache_resource
+    def load_model():
+        diabetes_model = pickle.load(open('models/model_diabetes.pkl', 'rb'))
+        return diabetes_model
+    
+    diabetes_model = load_model()
 
     # INPUTS
     col1, col2, col3 = st.columns(3)
