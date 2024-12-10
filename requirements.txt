@@ -3,8 +3,7 @@ numpy
 tensorflow
 torch
 keras
-PIL 
-cv2
+opencv-python
 ultralytics
 numpy
 pandas
