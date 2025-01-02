@@ -18,4 +18,6 @@ langchain_community
 langchain_openai
 langchain_experimental
 langchain_ollama
+langchain_huggingface
+langchain-core
 pytest
