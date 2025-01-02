@@ -10,7 +10,7 @@ def app():
     # MODEL
     @st.cache_resource
     def load_model():
-        model_path = '../models/model_blood_cells_best.pt'  
+        model_path = 'models/model_blood_cells_best.pt'  
         model = YOLO(model_path)                
         return model 
     

@@ -29,7 +29,7 @@ You can download sample data for the application here: [sample data](https://git
 
 ## Instructions
 
-Follow these steps to run the application locally and use all of the functionalities:
+Follow these steps to run the application locally and use all of the functionalities (chatbot can only run locally):
 
 ### 1. Install **Ollama** and run the Llama model
 
