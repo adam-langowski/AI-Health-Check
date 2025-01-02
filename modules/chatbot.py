@@ -7,7 +7,7 @@ from utils.chatbot_helper import *
 from langchain.chains import create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain_core.prompts import ChatPromptTemplate
-import pinecone
+from langchain.vectorstores import pinecone
 import socket
 
 def app():

@@ -12,6 +12,7 @@ langchain
 pypdf
 python-dotenv
 pinecone[grpc]
+pinecone-client
 langchain-pinecone
 langchain_community
 langchain_openai
