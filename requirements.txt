@@ -1,9 +1,9 @@
 streamlit
+opencv-python-headless
 numpy
 tensorflow
 torch
 keras
-opencv-python-headless
 ultralytics
 numpy
 pandas
